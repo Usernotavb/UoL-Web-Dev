@@ -29,5 +29,15 @@
         </form>
         <a href="index.html">Back to home</a>
     </section>
+
+    <script> 
+    document.querySelector('form').addEventListener('submit', function(event) { 
+        event.preventDefault(); // Stop the form from submitting 
+        const formData = new FormData(event.target); 
+        for (let [name, value] of formData.entries()) { 
+            console.log(`${name}: ${value}`); 
+        } 
+    }); 
+    </script> 
 </body>
 </html>
